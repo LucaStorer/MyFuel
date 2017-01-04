@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R3N-P9-CMn">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
@@ -31,9 +28,242 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="MyFuelWatch" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="Coa-Nf-lea">
+            <objects>
+                <controller id="R3N-P9-CMn" customClass="MainController" customModule="WatchConnectApp_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="ZSZ-oG-FHu" userLabel="MainGroup">
+                            <items>
+                                <label alignment="center" text="Consumo Medio" textAlignment="center" id="d5A-bm-Sno"/>
+                                <label alignment="center" text="8.47" textAlignment="center" id="f6F-xX-zKw">
+                                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="24"/>
+                                </label>
+                                <label alignment="center" text="l/100Km" id="Blf-FS-QN3"/>
+                                <separator alignment="left" id="uzo-rd-SYE">
+                                    <color key="color" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label alignment="center" text="22323 Km Anno" textAlignment="center" numberOfLines="2" id="hYK-EG-ptH">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                </label>
+                                <label alignment="center" text="0.102 €/l" id="nTc-PN-fPU">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                </label>
+                                <separator alignment="left" id="TtG-9i-2yk">
+                                    <color key="color" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label alignment="center" text="37270 Km Totali" textAlignment="center" numberOfLines="2" id="uEk-c4-PaF">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" id="vEu-5l-MJQ" userLabel="LoaderGroup">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" isAccessibilityElement="YES" image="Activity1" animationDuration="1" id="1gH-6a-xR5"/>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="Q9Q-k4-Q9c">
+                        <items>
+                            <menuItem title="Menu Item" icon="accept" id="3sx-yd-IC2"/>
+                            <menuItem title="Menu Item" icon="block" id="9qe-AG-KCV"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <segue destination="Yer-1E-huG" kind="relationship" relationship="nextPage" id="eXP-l5-19x"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-812" y="-129"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="7bu-lE-sTy">
+            <objects>
+                <controller id="Yer-1E-huG" customClass="InterfaceController" customModule="MyFuelWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="ROW-pp-ZSt" userLabel="MainGroup">
+                            <items>
+                                <button width="1" alignment="left" title="JSON" id="wsU-WX-VcY">
+                                    <connections>
+                                        <action selector="CmdJSON" destination="Yer-1E-huG" id="ZMD-Xa-CHd"/>
+                                    </connections>
+                                </button>
+                                <table alignment="left" id="Cm6-NK-SWd">
+                                    <items>
+                                        <tableRow identifier="CustomCell" id="kD7-8F-YEw" customClass="CustomCell" customModule="WatchConnectApp_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="72" alignment="left" animationDuration="1" layout="vertical" id="bEr-8U-puE">
+                                                <items>
+                                                    <group width="1" height="22" alignment="right" radius="6" id="kdX-nT-8gy">
+                                                        <items>
+                                                            <label width="0.5" height="1" alignment="right" text="01 gen 2016" textAlignment="center" id="s4F-Qp-z77">
+                                                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                                            </label>
+                                                            <imageView width="22" height="1" alignment="left" alpha="0.84999999999999998" image="Image" id="dH3-Du-Pi7"/>
+                                                        </items>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </group>
+                                                    <separator width="1" alignment="left" id="dgC-n9-Lne">
+                                                        <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </separator>
+                                                    <group width="1" alignment="left" id="5zL-0p-Jnb">
+                                                        <items>
+                                                            <imageView width="15" height="15" alignment="left" verticalAlignment="center" image="IconPartialWhite" id="Lg7-XJ-2j5">
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </imageView>
+                                                            <label width="0.5" widthAdjustment="1" alignment="right" text="-" textAlignment="center" id="P2r-za-PEm">
+                                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                                            </label>
+                                                            <label width="0.5" alignment="left" text="Km Totali:" textAlignment="left" id="20A-Rb-HLE">
+                                                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="ImgPartial" destination="Lg7-XJ-2j5" id="nho-lh-6Ky"/>
+                                                <outlet property="LblDate" destination="s4F-Qp-z77" id="Qvo-tE-ehj"/>
+                                                <outlet property="LblKmTot" destination="P2r-za-PEm" id="XmG-tM-ebr"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                                <label alignment="center" text="-" textAlignment="center" id="nel-wH-JTZ"/>
+                            </items>
+                        </group>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" id="Vw0-vx-scr" userLabel="LoaderGroup">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" isAccessibilityElement="YES" image="Activity1" animationDuration="1" id="Xgc-u2-Y2G"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="Loader" destination="Xgc-u2-Y2G" id="Qza-Pa-7WX"/>
+                        <outlet property="LoaderGroup" destination="Vw0-vx-scr" id="3pT-uG-dNE"/>
+                        <outlet property="MainGroup" destination="ROW-pp-ZSt" id="5ti-Ih-UI8"/>
+                        <outlet property="MyTable" destination="Cm6-NK-SWd" id="aOy-W0-N7h"/>
+                        <outlet property="statusLabel" destination="nel-wH-JTZ" id="Sxh-Df-k8E"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-435" y="-121"/>
+        </scene>
+        <!--DetailView-->
+        <scene sceneID="La8-Al-RUP">
+            <objects>
+                <controller identifier="DetailView" id="mJD-8N-Nrm" customClass="DetailsViewInterfaceController" customModule="WatchConnectApp_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="26E-Xz-VUo">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="Image" id="OPl-St-geb"/>
+                                <label width="0.80000000000000004" alignment="left" verticalAlignment="bottom" text="01 gen 2016" textAlignment="center" id="bM0-ND-Kbu"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="TzX-9M-UUQ"/>
+                        <group width="1" alignment="left" layout="vertical" id="7Qg-nn-a9l">
+                            <items>
+                                <group width="1" height="20" alignment="left" id="fpj-g6-Ql6">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" text="Km Totali:" textAlignment="right" id="gMb-dA-HXq">
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                        </label>
+                                        <label width="0.5" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="3fa-ji-HHW">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="20" alignment="left" id="EKE-m0-9Gl">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" text="Km Parz.:" textAlignment="right" id="W71-2k-Mzv">
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                        </label>
+                                        <label width="0.5" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="dl7-fr-LUU">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="20" alignment="left" id="rIY-9X-7RQ">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" text="€/l:" textAlignment="right" id="bH2-33-DG7">
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                        </label>
+                                        <label width="0.5" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="ttg-98-kQc">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="20" alignment="left" id="r7U-iB-FZw">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" text="Totale €:" textAlignment="right" id="Hq9-ZO-b4b">
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                        </label>
+                                        <imageView width="15" height="15" alignment="center" verticalAlignment="center" image="IconPartial" id="tqk-JF-VNr">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <label width="0.34999999999999998" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="WVZ-SJ-aMb">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="20" alignment="left" id="9Uc-7b-t66">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" text="Litri:" textAlignment="right" id="W3k-AF-MG5">
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="13"/>
+                                        </label>
+                                        <label width="0.5" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="NCf-KH-Z1Y">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" height="30" alignment="left" id="YK9-Zv-5Gw">
+                                    <items>
+                                        <label width="0.5" alignment="left" verticalAlignment="center" textAlignment="right" numberOfLines="2" id="JyH-JP-hF5">
+                                            <string key="text">Consumo 
+(l/100km):</string>
+                                            <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="italicSystem" weight="light" pointSize="11"/>
+                                        </label>
+                                        <label width="0.5" widthAdjustment="1" alignment="right" verticalAlignment="center" text="-" textAlignment="center" id="nm7-Dw-cSe">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        </group>
+                        <separator alignment="left" id="qRk-hM-2TI"/>
+                    </items>
+                    <connections>
+                        <outlet property="ImgPartial" destination="tqk-JF-VNr" id="VJA-3N-bfV"/>
+                        <outlet property="LblDate" destination="bM0-ND-Kbu" id="XVH-Si-WnA"/>
+                        <outlet property="LblKm" destination="dl7-fr-LUU" id="usF-Lr-hqV"/>
+                        <outlet property="LblKmTot" destination="3fa-ji-HHW" id="Cx5-Og-uLw"/>
+                        <outlet property="LblLitri" destination="NCf-KH-Z1Y" id="HXZ-SM-maV"/>
+                        <outlet property="LblLitri100Km" destination="nm7-Dw-cSe" id="a15-nN-P7A"/>
+                        <outlet property="Lbleuro" destination="WVZ-SJ-aMb" id="ybc-SW-yEF"/>
+                        <outlet property="Lbleurolitro" destination="ttg-98-kQc" id="Y4l-V3-HgP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-186" y="-99"/>
         </scene>
     </scenes>
 </document>

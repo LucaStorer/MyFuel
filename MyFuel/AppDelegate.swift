@@ -7,18 +7,100 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
+    var MySQL : MySql = MySql()
+    
+    var historyTable: [(String, Date,String,String,String,String,String,String,String,String)] = []
 
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        
+        var replyValues = Dictionary<String, AnyObject>()
+        
+     //   let viewController = self.window!.rootViewController as! ViewController
+        
+        switch message["command"] as! String {
+            
+        case "JSON" :
+            
+         //   viewController.LblStat.text = "Richieta in corso..."
+            
+            MySQL.GetAllData()
+            self.historyTable = MySQL.historyTable
+            
+            let StringData: String = GetStringData()
+            
+      //      viewController.LblStat.text = self.historyTable.count.description
+            
+            replyValues["status"] = StringData as AnyObject?
+        default:
+            break
+        }
+        replyHandler(replyValues)
+    }
+
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+            
+            if session.isPaired != true {
+                print("Apple Watch is not paired")
+            }
+            
+            if session.isWatchAppInstalled != true {
+                print("WatchKit app is not installed")
+            }
+        } else {
+            print("WatchConnectivity is not supported on this device")
+        }
         return true
     }
 
+    //Crea un'unica stringa che viene passata per poi essere nuovamente processata
+    private func GetStringData() -> String{
+        
+        var StringData: String = ""
+        
+        for row: (String, Date,String,String,String,String,String,String,String,String) in self.historyTable{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+            dateFormatter.timeStyle = DateFormatter.Style.none
+            
+            let DataString :String = dateFormatter.string(from: row.1)
+            
+            StringData = StringData + "\(row.0)|\(DataString)|\(row.2)|\(row.3)|\(row.4)|\(row.5)|\(row.6)|\(row.7)|\(row.8)|\(row.9)#"
+            
+        }
+        
+        return StringData
+        
+    }
+
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

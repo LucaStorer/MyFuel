@@ -20,13 +20,17 @@
 		AB85FAEA1D9951FC00197310 /* CustomStatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85FAE81D9951FC00197310 /* CustomStatCell.swift */; };
 		AB85FAEB1D9951FC00197310 /* CustomStatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB85FAE91D9951FC00197310 /* CustomStatCell.xib */; };
 		AB99D5501E1C7F5500FAD6F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB99D54E1E1C7F5500FAD6F6 /* Interface.storyboard */; };
-		AB99D5521E1C7F5500FAD6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */; };
 		AB99D5591E1C7F5500FAD6F6 /* MyFuelWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AB99D5581E1C7F5500FAD6F6 /* MyFuelWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AB99D5601E1C7F5500FAD6F6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99D55F1E1C7F5500FAD6F6 /* InterfaceController.swift */; };
 		AB99D5621E1C7F5500FAD6F6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */; };
 		AB99D5641E1C7F5500FAD6F6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */; };
-		AB99D5661E1C7F5500FAD6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5651E1C7F5500FAD6F6 /* Assets.xcassets */; };
 		AB99D56A1E1C7F5500FAD6F6 /* MyFuelWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB99D54C1E1C7F5500FAD6F6 /* MyFuelWatch.app */; };
+		ABDBD3081E1D374D0074F46F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3051E1D374D0074F46F /* MainController.swift */; };
+		ABDBD3091E1D374D0074F46F /* DetailsViewInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */; };
+		ABDBD30A1E1D374D0074F46F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3071E1D374D0074F46F /* CustomCell.swift */; };
+		ABDBD30B1E1D3D9A0074F46F /* Indicator.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABDBD3031E1D37290074F46F /* Indicator.xcassets */; };
+		ABDBD30C1E1D3D9E0074F46F /* AssetsWatch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5651E1C7F5500FAD6F6 /* AssetsWatch.xcassets */; };
+		ABDBD30D1E1D3DA80074F46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,15 +92,19 @@
 		AB85FAE91D9951FC00197310 /* CustomStatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStatCell.xib; sourceTree = "<group>"; };
 		AB99D54C1E1C7F5500FAD6F6 /* MyFuelWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFuelWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB99D54F1E1C7F5500FAD6F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../MyFuelWatch/Assets.xcassets; sourceTree = "<group>"; };
 		AB99D5531E1C7F5500FAD6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB99D5581E1C7F5500FAD6F6 /* MyFuelWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFuelWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB99D55E1E1C7F5500FAD6F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		AB99D55F1E1C7F5500FAD6F6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		AB99D5651E1C7F5500FAD6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB99D5651E1C7F5500FAD6F6 /* AssetsWatch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AssetsWatch.xcassets; path = "MyFuelWatch Extension/AssetsWatch.xcassets"; sourceTree = SOURCE_ROOT; };
 		AB99D5671E1C7F5500FAD6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABDBD3031E1D37290074F46F /* Indicator.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Indicator.xcassets; path = "MyFuelWatch Extension/Indicator.xcassets"; sourceTree = SOURCE_ROOT; };
+		ABDBD3051E1D374D0074F46F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewInterfaceController.swift; sourceTree = "<group>"; };
+		ABDBD3071E1D374D0074F46F /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +177,9 @@
 		AB99D54D1E1C7F5500FAD6F6 /* MyFuelWatch */ = {
 			isa = PBXGroup;
 			children = (
+				AB99D5651E1C7F5500FAD6F6 /* AssetsWatch.xcassets */,
+				ABDBD3031E1D37290074F46F /* Indicator.xcassets */,
 				AB99D54E1E1C7F5500FAD6F6 /* Interface.storyboard */,
-				AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */,
 				AB99D5531E1C7F5500FAD6F6 /* Info.plist */,
 			);
 			path = MyFuelWatch;
@@ -179,10 +188,13 @@
 		AB99D55C1E1C7F5500FAD6F6 /* MyFuelWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				ABDBD3051E1D374D0074F46F /* MainController.swift */,
+				ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */,
+				ABDBD3071E1D374D0074F46F /* CustomCell.swift */,
 				AB99D55F1E1C7F5500FAD6F6 /* InterfaceController.swift */,
 				AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */,
 				AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */,
-				AB99D5651E1C7F5500FAD6F6 /* Assets.xcassets */,
+				AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */,
 				AB99D5671E1C7F5500FAD6F6 /* Info.plist */,
 				AB99D55D1E1C7F5500FAD6F6 /* Supporting Files */,
 			);
@@ -325,7 +337,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB99D5521E1C7F5500FAD6F6 /* Assets.xcassets in Resources */,
+				ABDBD30B1E1D3D9A0074F46F /* Indicator.xcassets in Resources */,
+				ABDBD30C1E1D3D9E0074F46F /* AssetsWatch.xcassets in Resources */,
 				AB99D5501E1C7F5500FAD6F6 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB99D5661E1C7F5500FAD6F6 /* Assets.xcassets in Resources */,
+				ABDBD30D1E1D3DA80074F46F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDBD3081E1D374D0074F46F /* MainController.swift in Sources */,
 				AB99D5641E1C7F5500FAD6F6 /* NotificationController.swift in Sources */,
 				AB99D5621E1C7F5500FAD6F6 /* ExtensionDelegate.swift in Sources */,
 				AB99D5601E1C7F5500FAD6F6 /* InterfaceController.swift in Sources */,
+				ABDBD30A1E1D374D0074F46F /* CustomCell.swift in Sources */,
+				ABDBD3091E1D374D0074F46F /* DetailsViewInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EP75SSBDBP;
@@ -516,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = EP75SSBDBP;
@@ -532,7 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = EP75SSBDBP;
 				IBSC_MODULE = MyFuelWatch_Extension;
@@ -552,7 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconWatch;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = EP75SSBDBP;
 				IBSC_MODULE = MyFuelWatch_Extension;
@@ -632,6 +650,7 @@
 				AB99D56E1E1C7F5500FAD6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB99D5711E1C7F5500FAD6F6 /* Build configuration list for PBXNativeTarget "MyFuelWatch" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +659,7 @@
 				AB99D56C1E1C7F5500FAD6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
