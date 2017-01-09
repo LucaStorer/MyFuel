@@ -22,6 +22,22 @@ class NewItemsInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        
+        if let text = context as? String {
+            
+              print(text)
+            
+            if text != ""{
+          
+                print("DATA: \(text)")
+                
+               
+                
+               
+                
+            }
+            
+        }
     }
 
     override func willActivate() {
@@ -34,4 +50,29 @@ class NewItemsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+  
+    @IBAction func CmdKmTot(_ sender: Any) {
+        
+        presentTextInputController(withSuggestions: nil,allowedInputMode: WKTextInputMode.plain,completion: {(results) -> Void in
+            if results != nil && results!.count > 0 { //selection made
+                let aResult = results?[0] as! String
+                self.LblKmTot.setText("\(aResult) Km")
+                
+                for res in results!{
+                    
+                    
+                    print(res)
+                    
+                }
+            }
+        })
+    }
+  
+    
+    @IBAction func CmdDate(_ sender: Any) {
+        
+        self.presentController(withName: "DateView", context: "")
+        
+    }
+    
 }

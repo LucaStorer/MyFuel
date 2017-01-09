@@ -103,7 +103,7 @@ class MainController: WKInterfaceController {
 
     @IBAction func MenuNewItem() {
         
-          self.pushController(withName: "NewItemView", context: nil)
+          self.presentController(withName: "newitemview", context: "")
         
     }
 

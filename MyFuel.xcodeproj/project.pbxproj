@@ -27,6 +27,7 @@
 		AB99D56A1E1C7F5500FAD6F6 /* MyFuelWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB99D54C1E1C7F5500FAD6F6 /* MyFuelWatch.app */; };
 		ABB6E8B61E21217500F53F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */; };
 		ABCEE5151E23B25100710FEA /* NewItemsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */; };
+		ABCEE5171E23D59E00710FEA /* DateViewInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEE5161E23D59E00710FEA /* DateViewInterfaceController.swift */; };
 		ABDBD3081E1D374D0074F46F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3051E1D374D0074F46F /* MainController.swift */; };
 		ABDBD3091E1D374D0074F46F /* DetailsViewInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */; };
 		ABDBD30A1E1D374D0074F46F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3071E1D374D0074F46F /* CustomCell.swift */; };
@@ -104,6 +105,7 @@
 		AB99D5651E1C7F5500FAD6F6 /* AssetsWatch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AssetsWatch.xcassets; path = "MyFuelWatch Extension/AssetsWatch.xcassets"; sourceTree = SOURCE_ROOT; };
 		AB99D5671E1C7F5500FAD6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemsInterfaceController.swift; sourceTree = "<group>"; };
+		ABCEE5161E23D59E00710FEA /* DateViewInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewInterfaceController.swift; sourceTree = "<group>"; };
 		ABDBD3031E1D37290074F46F /* Indicator.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Indicator.xcassets; path = "MyFuelWatch Extension/Indicator.xcassets"; sourceTree = SOURCE_ROOT; };
 		ABDBD3051E1D374D0074F46F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewInterfaceController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */,
 				AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */,
 				ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */,
+				ABCEE5161E23D59E00710FEA /* DateViewInterfaceController.swift */,
 				AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */,
 				AB99D5671E1C7F5500FAD6F6 /* Info.plist */,
 				AB99D55D1E1C7F5500FAD6F6 /* Supporting Files */,
@@ -388,6 +391,7 @@
 				AB99D5621E1C7F5500FAD6F6 /* ExtensionDelegate.swift in Sources */,
 				AB99D5601E1C7F5500FAD6F6 /* InterfaceController.swift in Sources */,
 				ABDBD30A1E1D374D0074F46F /* CustomCell.swift in Sources */,
+				ABCEE5171E23D59E00710FEA /* DateViewInterfaceController.swift in Sources */,
 				ABDBD3091E1D374D0074F46F /* DetailsViewInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

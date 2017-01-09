@@ -88,16 +88,33 @@
             </objects>
             <point key="canvasLocation" x="-812" y="-129"/>
         </scene>
-        <!--NewItemView-->
+        <!--newitemview-->
         <scene sceneID="2M8-0W-QRQ">
             <objects>
-                <controller identifier="NewItemView" id="sDv-fw-sBI" customClass="NewItemsInterfaceController" customModule="MyFuelWatch_Extension">
+                <controller identifier="newitemview" id="sDv-fw-sBI" customClass="NewItemsInterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
-                        <dateLabel alignment="center" id="QLb-iG-78c">
-                            <dateFormatterStyle key="dateStyle" short="YES"/>
-                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        <separator alignment="left" id="KAB-3J-YZe"/>
+                        <dateLabel alignment="center" textAlignment="center" id="QLb-iG-78c">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="lTx-qQ-uC4">
+                                    <connections>
+                                        <action selector="CmdDate:" destination="sDv-fw-sBI" id="8Vy-UE-pe7"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                            <dateFormatterStyle key="dateStyle" medium="YES"/>
                         </dateLabel>
-                        <label alignment="center" text="Label" id="hW7-lL-CJk"/>
+                        <label width="1" alignment="center" text="0 Km" textAlignment="center" id="hW7-lL-CJk">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="Dw5-7U-331">
+                                    <connections>
+                                        <action selector="CmdKmTot:" destination="sDv-fw-sBI" id="JrD-P0-mfl"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="LblDate" destination="QLb-iG-78c" id="nec-jl-4Hz"/>
@@ -106,6 +123,46 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-813" y="196"/>
+        </scene>
+        <!--DateView-->
+        <scene sceneID="wWT-CH-Qcj">
+            <objects>
+                <controller identifier="DateView" id="jJq-z9-GSr" customClass="DateViewInterfaceController" customModule="MyFuelWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="fza-fj-ulM">
+                            <items>
+                                <picker width="0.29999999999999999" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="il1-Ap-mwu">
+                                    <connections>
+                                        <action selector="CmdDay:" destination="jJq-z9-GSr" id="Mvb-di-CRR"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.29999999999999999" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="2Ug-2K-vfM">
+                                    <connections>
+                                        <action selector="CmdMonth:" destination="jJq-z9-GSr" id="qJS-e9-cs9"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.40000000000000002" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="WAB-z2-uyY">
+                                    <connections>
+                                        <action selector="CmdYear:" destination="jJq-z9-GSr" id="a20-yo-3Rj"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="rga-Dg-se5"/>
+                        <button width="1" alignment="left" title="Ok" id="9qH-wm-iKZ">
+                            <connections>
+                                <action selector="CmdOk" destination="jJq-z9-GSr" id="eaM-aw-RAw"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="picDay" destination="il1-Ap-mwu" id="rh2-r0-8uK"/>
+                        <outlet property="picMonth" destination="2Ug-2K-vfM" id="eLh-LR-RNU"/>
+                        <outlet property="picYear" destination="WAB-z2-uyY" id="uBL-qS-zxQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-608" y="196"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="7bu-lE-sTy">
