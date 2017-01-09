@@ -35,7 +35,7 @@
         <!--Main Controller-->
         <scene sceneID="Coa-Nf-lea">
             <objects>
-                <controller id="R3N-P9-CMn" customClass="MainController" customModule="WatchConnectApp_WatchKit_Extension">
+                <controller id="R3N-P9-CMn" customClass="MainController" customModule="MyFuelWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="ZSZ-oG-FHu" userLabel="MainGroup">
                             <items>
@@ -70,32 +70,58 @@
                     </items>
                     <menu key="menu" id="Q9Q-k4-Q9c">
                         <items>
-                            <menuItem title="Menu Item" icon="accept" id="3sx-yd-IC2"/>
-                            <menuItem title="Menu Item" icon="block" id="9qe-AG-KCV"/>
+                            <menuItem title="Nuovo" icon="add" id="3sx-yd-IC2">
+                                <connections>
+                                    <action selector="MenuNewItem" destination="R3N-P9-CMn" id="Ouf-CR-OIv"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="LblEuroLitri" destination="nTc-PN-fPU" id="xZM-PT-Sqg"/>
+                        <outlet property="LblKm" destination="uEk-c4-PaF" id="e7y-Aa-0Np"/>
+                        <outlet property="LblKmAnno" destination="hYK-EG-ptH" id="wmL-Xy-xzv"/>
+                        <outlet property="LblLitri100Km" destination="f6F-xX-zKw" id="wdZ-Ew-7uY"/>
                         <segue destination="Yer-1E-huG" kind="relationship" relationship="nextPage" id="eXP-l5-19x"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-812" y="-129"/>
         </scene>
+        <!--NewItemView-->
+        <scene sceneID="2M8-0W-QRQ">
+            <objects>
+                <controller identifier="NewItemView" id="sDv-fw-sBI" customClass="NewItemsInterfaceController" customModule="MyFuelWatch_Extension">
+                    <items>
+                        <dateLabel alignment="center" id="QLb-iG-78c">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <label alignment="center" text="Label" id="hW7-lL-CJk"/>
+                    </items>
+                    <connections>
+                        <outlet property="LblDate" destination="QLb-iG-78c" id="nec-jl-4Hz"/>
+                        <outlet property="LblKmTot" destination="hW7-lL-CJk" id="7dZ-Rl-BbG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-813" y="196"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="7bu-lE-sTy">
             <objects>
-                <controller id="Yer-1E-huG" customClass="InterfaceController" customModule="MyFuelWatch" customModuleProvider="target">
+                <controller id="Yer-1E-huG" customClass="InterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
                         <group width="1" alignment="left" hidden="YES" layout="vertical" id="ROW-pp-ZSt" userLabel="MainGroup">
                             <items>
-                                <button width="1" alignment="left" title="JSON" id="wsU-WX-VcY">
+                                <button width="1" alignment="left" hidden="YES" title="JSON" id="wsU-WX-VcY">
                                     <connections>
                                         <action selector="CmdJSON" destination="Yer-1E-huG" id="ZMD-Xa-CHd"/>
                                     </connections>
                                 </button>
                                 <table alignment="left" id="Cm6-NK-SWd">
                                     <items>
-                                        <tableRow identifier="CustomCell" id="kD7-8F-YEw" customClass="CustomCell" customModule="WatchConnectApp_WatchKit_Extension">
+                                        <tableRow identifier="CustomCell" id="kD7-8F-YEw" customClass="CustomCell" customModule="MyFuelWatch_Extension">
                                             <group key="rootItem" width="1" height="72" alignment="left" animationDuration="1" layout="vertical" id="bEr-8U-puE">
                                                 <items>
                                                     <group width="1" height="22" alignment="right" radius="6" id="kdX-nT-8gy">
@@ -149,16 +175,16 @@
                         <outlet property="LoaderGroup" destination="Vw0-vx-scr" id="3pT-uG-dNE"/>
                         <outlet property="MainGroup" destination="ROW-pp-ZSt" id="5ti-Ih-UI8"/>
                         <outlet property="MyTable" destination="Cm6-NK-SWd" id="aOy-W0-N7h"/>
-                        <outlet property="statusLabel" destination="nel-wH-JTZ" id="Sxh-Df-k8E"/>
+                        <outlet property="StatusLabel" destination="nel-wH-JTZ" id="L60-vX-QNW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-435" y="-121"/>
+            <point key="canvasLocation" x="-572" y="-129"/>
         </scene>
         <!--DetailView-->
         <scene sceneID="La8-Al-RUP">
             <objects>
-                <controller identifier="DetailView" id="mJD-8N-Nrm" customClass="DetailsViewInterfaceController" customModule="WatchConnectApp_WatchKit_Extension">
+                <controller identifier="DetailView" id="mJD-8N-Nrm" customClass="DetailsViewInterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
                         <group width="1" alignment="left" id="26E-Xz-VUo">
                             <items>
@@ -263,7 +289,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-186" y="-99"/>
+            <point key="canvasLocation" x="-372" y="-120"/>
         </scene>
     </scenes>
 </document>

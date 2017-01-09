@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     var MySQL : MySql = MySql()
     
     var historyTable: [(String, Date,String,String,String,String,String,String,String,String)] = []
+    var StatTable: [(String,String,String,String,String,String,String)] = []
+
 
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -41,23 +43,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             
         case "JSON" :
             
-         //   viewController.LblStat.text = "Richieta in corso..."
             
             MySQL.GetAllData()
             self.historyTable = MySQL.historyTable
             
             let StringData: String = GetStringData()
             
-      //      viewController.LblStat.text = self.historyTable.count.description
-            
             replyValues["status"] = StringData as AnyObject?
+            
+        case "JSON-STAT" :
+            
+                MySQL.GetStatData()
+                
+                self.StatTable = MySQL.v_StatTable
+            
+             let StringDataStat: String = GetStringDataStat()
+            
+                replyValues["status"] = StringDataStat as AnyObject?
+
         default:
             break
         }
+        
         replyHandler(replyValues)
-    }
-
     
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -99,6 +109,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         return StringData
         
     }
+    
+    //Crea un'unica stringa che viene passata per poi essere nuovamente processata
+    private func GetStringDataStat() -> String{
+        
+        var StringDataStat: String = ""
+        
+        for row: (String,String,String,String,String,String,String) in self.StatTable{
+            
+            StringDataStat = StringDataStat + "\(row.0)|\(row.1)|\(row.2)|\(row.3)|\(row.4)|\(row.5)|\(row.6)#"
+            
+        }
+        
+        return StringDataStat
+        
+    }
+
+    
 
     
     func applicationWillResignActive(_ application: UIApplication) {

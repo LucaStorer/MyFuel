@@ -13,7 +13,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    @IBOutlet var statusLabel: WKInterfaceLabel!
+    @IBOutlet var StatusLabel: WKInterfaceLabel!
     @IBOutlet var MyTable: WKInterfaceTable!
     @IBOutlet var Loader: WKInterfaceImage!
     
@@ -70,14 +70,15 @@ class InterfaceController: WKInterfaceController {
         
             let requestValues = ["command" : "JSON"]
             let session = WCSession.default()
-            
+        
+        
             session.sendMessage(requestValues, replyHandler: { reply in
                 self.history = (reply["status"] as? String)!
                 //  print("Result: \(self.history)")
                 
                 if  self.CreateDataArry() == true {
                     
-                    self.statusLabel.setText(self.historyTable.count.description)
+                    self.StatusLabel.setText(self.historyTable.count.description)
                     
                     //Carica i dati nella tabella
                     self.LoadTableData()

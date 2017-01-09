@@ -25,6 +25,8 @@
 		AB99D5621E1C7F5500FAD6F6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */; };
 		AB99D5641E1C7F5500FAD6F6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */; };
 		AB99D56A1E1C7F5500FAD6F6 /* MyFuelWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = AB99D54C1E1C7F5500FAD6F6 /* MyFuelWatch.app */; };
+		ABB6E8B61E21217500F53F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */; };
+		ABCEE5151E23B25100710FEA /* NewItemsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */; };
 		ABDBD3081E1D374D0074F46F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3051E1D374D0074F46F /* MainController.swift */; };
 		ABDBD3091E1D374D0074F46F /* DetailsViewInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */; };
 		ABDBD30A1E1D374D0074F46F /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDBD3071E1D374D0074F46F /* CustomCell.swift */; };
@@ -101,6 +103,7 @@
 		AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		AB99D5651E1C7F5500FAD6F6 /* AssetsWatch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = AssetsWatch.xcassets; path = "MyFuelWatch Extension/AssetsWatch.xcassets"; sourceTree = SOURCE_ROOT; };
 		AB99D5671E1C7F5500FAD6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemsInterfaceController.swift; sourceTree = "<group>"; };
 		ABDBD3031E1D37290074F46F /* Indicator.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Indicator.xcassets; path = "MyFuelWatch Extension/Indicator.xcassets"; sourceTree = SOURCE_ROOT; };
 		ABDBD3051E1D374D0074F46F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		ABDBD3061E1D374D0074F46F /* DetailsViewInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewInterfaceController.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 			children = (
 				ABCF1ACC1D99CFD300582316 /* Image */,
 				AB85FAE71D99519300197310 /* Cells */,
+				AB4E34DD1D9C10F700ED5325 /* MySqlClass.swift */,
 				AB098FAA1D99478E00622188 /* AppDelegate.swift */,
 				AB098FAC1D99478E00622188 /* ViewController.swift */,
 				AB098FAE1D99478E00622188 /* Main.storyboard */,
@@ -158,7 +162,6 @@
 				AB098FB31D99478E00622188 /* LaunchScreen.storyboard */,
 				AB098FB61D99478E00622188 /* Info.plist */,
 				AB26A7B31D996676000F5A34 /* ViewNewValue.swift */,
-				AB4E34DD1D9C10F700ED5325 /* MySqlClass.swift */,
 			);
 			path = MyFuel;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				AB99D55F1E1C7F5500FAD6F6 /* InterfaceController.swift */,
 				AB99D5611E1C7F5500FAD6F6 /* ExtensionDelegate.swift */,
 				AB99D5631E1C7F5500FAD6F6 /* NotificationController.swift */,
+				ABCEE5141E23B25100710FEA /* NewItemsInterfaceController.swift */,
 				AB99D5511E1C7F5500FAD6F6 /* Assets.xcassets */,
 				AB99D5671E1C7F5500FAD6F6 /* Info.plist */,
 				AB99D55D1E1C7F5500FAD6F6 /* Supporting Files */,
@@ -287,6 +291,11 @@
 						DevelopmentTeam = EP75SSBDBP;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AB99D54B1E1C7F5500FAD6F6 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -339,6 +348,7 @@
 			files = (
 				ABDBD30B1E1D3D9A0074F46F /* Indicator.xcassets in Resources */,
 				ABDBD30C1E1D3D9E0074F46F /* AssetsWatch.xcassets in Resources */,
+				ABB6E8B61E21217500F53F6E /* Assets.xcassets in Resources */,
 				AB99D5501E1C7F5500FAD6F6 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDBD3081E1D374D0074F46F /* MainController.swift in Sources */,
+				ABCEE5151E23B25100710FEA /* NewItemsInterfaceController.swift in Sources */,
 				AB99D5641E1C7F5500FAD6F6 /* NotificationController.swift in Sources */,
 				AB99D5621E1C7F5500FAD6F6 /* ExtensionDelegate.swift in Sources */,
 				AB99D5601E1C7F5500FAD6F6 /* InterfaceController.swift in Sources */,
