@@ -114,6 +114,16 @@ var monthsMap = [Int: String]()
 		
 		year = yearsArray[0]
 	}
+
+       override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+    }
+
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
 	
 	func setDefaultPickersOnDatePickerInterfaceController() {
 		let todayDate = NSDate()
@@ -135,6 +145,17 @@ var monthsMap = [Int: String]()
 		yearPicker.setSelectedItemIndex(year - yearOffset)
 		
 	}
+
+ 
+       @IBAction func CmdOk() {
+        
+        let DateString = getDateFromString
+        
+        print(DateString)
+        
+        presentController(withName: "newitemview", context: DateString)
+        
+    }
 
 
   /*  @IBOutlet var picDay: WKInterfacePicker!
