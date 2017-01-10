@@ -169,9 +169,9 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        self.pushController(withName: "DetailView", context: historyTable[rowIndex])
+        self.presentController(withName: "DetailView", context: historyTable[rowIndex])
         
-        print(historyTable[rowIndex])
+      //  print(historyTable[rowIndex])
         
      }
     

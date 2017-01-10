@@ -42,21 +42,7 @@ class DateViewInterfaceController: WKInterfaceController {
 	}
 	
 	
-	func getDateFromString() -> NSDate {
-		let dateFormatter = DateFormatter()
-		dateFormatter.dateFormat = "dd mm yyyy"
 		
-		let dateString = day.description + " " + month.description + " " + year.description 
-		let dateObtainedFromString = dateFormatter.date(from: dateString)
-		
-		if let _ = dateObtainedFromString {
-			return dateObtainedFromString! as NSDate
-		}
-		else {
-			return NSDate.init(timeIntervalSinceNow: 100)
-		}
-	}
-	
 	   override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 		// Fill months map with month abbreviations
@@ -134,6 +120,7 @@ class DateViewInterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+       
     }
 	
 	func setDefaultPickersOnDatePickerInterfaceController() {
@@ -156,6 +143,28 @@ class DateViewInterfaceController: WKInterfaceController {
 		yearPicker.setSelectedItemIndex(year! - yearOffset)
 		
 	}
+    
+    func getDateFromString() -> String {
+      //  let dateFormatter = DateFormatter()
+       // dateFormatter.dateFormat = "dd MM yyyy"
+       // dateFormatter.dateStyle = .short
+        
+       // let dateString = day.description + " " + month.description + " " + year.description
+       // let dateObtainedFromString = dateFormatter.date(from: dateString)
+        
+      //  if let _ = dateObtainedFromString {
+       //     return dateObtainedFromString! as NSDate
+      //  }
+      //  else {
+       //     return NSDate.init(timeIntervalSinceNow: 100)
+       // }
+        
+         let DateString = "\(String(format: "%02d",day))/\(String(format: "%02d",month))/\(year)"
+        
+        return DateString
+        
+    }
+
 
  
        @IBAction func CmdOk() {
@@ -164,7 +173,11 @@ class DateViewInterfaceController: WKInterfaceController {
         
         print(DateString)
         
-        presentController(withName: "newitemview", context: DateString)
+    
+        
+       presentController(withName: "newitemview", context: DateString)
+        self.dismissAddPassesController()
+
         
     }
 

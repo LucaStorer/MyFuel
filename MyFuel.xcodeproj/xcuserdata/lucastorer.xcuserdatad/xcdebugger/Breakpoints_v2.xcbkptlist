@@ -358,7 +358,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DetailsViewInterfaceController.swift"
@@ -406,7 +406,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DetailsViewInterfaceController.swift"
@@ -422,7 +422,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DetailsViewInterfaceController.swift"
@@ -534,7 +534,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DetailsViewInterfaceController.swift"
@@ -547,49 +547,49 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyFuelWatch_Extension.DetailsViewInterfaceController.LblDate.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.WKInterfaceLabel&gt;"
                   moduleName = "MyFuelWatch Extension"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucastorer/GitHub/MyFuel/MyFuelWatch%20Extension/DetailsViewInterfaceController.swift"
-                  timestampString = "505771343.619186"
+                  timestampString = "505778113.585894"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "38">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyFuelWatch_Extension.DetailsViewInterfaceController.LblDate.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.WKInterfaceLabel&gt;"
                   moduleName = "MyFuelWatch Extension"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucastorer/GitHub/MyFuel/MyFuelWatch%20Extension/DetailsViewInterfaceController.swift"
-                  timestampString = "505771343.622868"
+                  timestampString = "505778113.588558"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "76">
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyFuelWatch_Extension.DetailsViewInterfaceController.init () -&gt; MyFuelWatch_Extension.DetailsViewInterfaceController"
                   moduleName = "MyFuelWatch Extension"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucastorer/GitHub/MyFuel/MyFuelWatch%20Extension/DetailsViewInterfaceController.swift"
-                  timestampString = "505771343.626487"
+                  timestampString = "505778113.591392"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "29">
+                  offsetFromSymbolStart = "128">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -856,28 +856,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
-            timestampString = "505672124.701949"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "CmdDate(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770597.116128"
+            timestampString = "505778753.409437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "setDefaultPickersOnDatePickerInterfaceController()"
             landmarkType = "7">
          </BreakpointContent>
@@ -889,27 +873,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505765522.306229"
+            timestampString = "505781948.078661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "getDateFromString()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770597.116128"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "CmdOk()"
             landmarkType = "7">
          </BreakpointContent>
@@ -917,15 +885,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770597.116128"
+            timestampString = "505778753.409437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "setDefaultPickersOnDatePickerInterfaceController()"
             landmarkType = "7">
          </BreakpointContent>
@@ -937,11 +905,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770697.503937"
+            timestampString = "505776482.245644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "awake(withContext:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -953,11 +921,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770763.368339"
+            timestampString = "505776482.245644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "awake(withContext:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -969,11 +937,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770796.269399"
+            timestampString = "505776482.245644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "awake(withContext:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -985,11 +953,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770797.859428"
+            timestampString = "505776482.245644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "awake(withContext:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1001,12 +969,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505770811.201092"
+            timestampString = "505776482.245644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "awake(withContext:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/InterfaceController.swift"
+            timestampString = "505777582.896627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "table(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
+            timestampString = "505781433.640709"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "CmdData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/DetailsViewInterfaceController.swift"
+            timestampString = "505778215.082796"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "willActivate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
+            timestampString = "505778504.442958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "CmdData(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
+            timestampString = "505778512.596693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "awake(withContext:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
+            timestampString = "505778686.813296"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "didDeactivate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1016,13 +1080,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
-            timestampString = "505771411.174391"
+            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
+            timestampString = "505781433.640709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "getDateFromString()"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "contextForSegueWithIdentifier(segueIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/DateViewInterfaceController.swift"
+            timestampString = "505781948.078661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "CmdOk()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFuelWatch Extension/NewItemsInterfaceController.swift"
+            timestampString = "505781506.051317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "CmdKmTot(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

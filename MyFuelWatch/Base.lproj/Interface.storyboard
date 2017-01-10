@@ -88,23 +88,30 @@
             </objects>
             <point key="canvasLocation" x="-812" y="-129"/>
         </scene>
-        <!--newitemview-->
+        <!--Annulla-->
         <scene sceneID="2M8-0W-QRQ">
             <objects>
-                <controller identifier="newitemview" id="sDv-fw-sBI" customClass="NewItemsInterfaceController" customModule="MyFuelWatch_Extension">
+                <controller identifier="newitemview" title="Annulla" id="sDv-fw-sBI" customClass="NewItemsInterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
+                        <group width="1" alignment="left" id="VCg-bU-ela">
+                            <items>
+                                <imageView width="30" height="30" alignment="left" image="Image" id="Ed9-YO-H6b"/>
+                                <label alignment="center" verticalAlignment="bottom" text="Nuovo Rifornimento" textAlignment="center" id="lFm-Q2-WRD">
+                                    <fontDescription key="font" type="italicSystem" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
                         <separator alignment="left" id="KAB-3J-YZe"/>
-                        <dateLabel alignment="center" textAlignment="center" id="QLb-iG-78c">
+                        <label width="1" alignment="left" text="-" textAlignment="center" id="3Md-Vu-yMG">
                             <gestureRecognizers>
-                                <tapGestureRecognizer id="lTx-qQ-uC4">
+                                <tapGestureRecognizer id="Der-VE-g8U">
                                     <connections>
-                                        <action selector="CmdDate:" destination="sDv-fw-sBI" id="8Vy-UE-pe7"/>
+                                        <action selector="CmdData:" destination="sDv-fw-sBI" id="01p-CI-EBj"/>
                                     </connections>
                                 </tapGestureRecognizer>
                             </gestureRecognizers>
-                            <fontDescription key="font" type="system" pointSize="23"/>
-                            <dateFormatterStyle key="dateStyle" medium="YES"/>
-                        </dateLabel>
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                        </label>
                         <label width="1" alignment="center" text="0 Km" textAlignment="center" id="hW7-lL-CJk">
                             <gestureRecognizers>
                                 <tapGestureRecognizer id="Dw5-7U-331">
@@ -115,20 +122,32 @@
                             </gestureRecognizers>
                             <fontDescription key="font" type="system" pointSize="23"/>
                         </label>
+                        <separator alignment="left" id="Fsc-MX-5gh"/>
+                        <button width="1" alignment="left" title="Aggiungi" id="i75-GD-O8z">
+                            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="CmdSave" destination="sDv-fw-sBI" id="QCS-i5-qqd"/>
+                                <segue destination="jJq-z9-GSr" kind="modal" identifier="add" id="Ra2-Bb-yXo"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="LblDate" destination="QLb-iG-78c" id="nec-jl-4Hz"/>
+                        <outlet property="LblData" destination="3Md-Vu-yMG" id="8Tk-ou-xn3"/>
                         <outlet property="LblKmTot" destination="hW7-lL-CJk" id="7dZ-Rl-BbG"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-813" y="196"/>
         </scene>
-        <!--DateView-->
+        <!--Done-->
         <scene sceneID="wWT-CH-Qcj">
             <objects>
-                <controller identifier="DateView" id="jJq-z9-GSr" customClass="DateViewInterfaceController" customModule="MyFuelWatch_Extension">
+                <controller identifier="DateView" title="Done" id="jJq-z9-GSr" customClass="DateViewInterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
+                        <label alignment="center" text="Seleziona Data" textAlignment="center" id="gJ6-zK-ABa">
+                            <fontDescription key="font" type="italicSystem" pointSize="14"/>
+                        </label>
+                        <separator alignment="left" id="Zj5-h7-wvl"/>
                         <group width="1" alignment="left" id="fza-fj-ulM">
                             <items>
                                 <picker width="0.29999999999999999" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="il1-Ap-mwu">
@@ -148,8 +167,8 @@
                                 </picker>
                             </items>
                         </group>
-                        <separator alignment="left" id="rga-Dg-se5"/>
                         <button width="1" alignment="left" title="Ok" id="9qH-wm-iKZ">
+                            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="CmdOk" destination="jJq-z9-GSr" id="eaM-aw-RAw"/>
                             </connections>
@@ -162,7 +181,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-608" y="196"/>
+            <point key="canvasLocation" x="-473" y="196"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="7bu-lE-sTy">
@@ -238,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="-572" y="-129"/>
         </scene>
-        <!--DetailView-->
+        <!--indietro-->
         <scene sceneID="La8-Al-RUP">
             <objects>
-                <controller identifier="DetailView" id="mJD-8N-Nrm" customClass="DetailsViewInterfaceController" customModule="MyFuelWatch_Extension">
+                <controller identifier="DetailView" title="indietro" id="mJD-8N-Nrm" customClass="DetailsViewInterfaceController" customModule="MyFuelWatch_Extension">
                     <items>
                         <group width="1" alignment="left" id="26E-Xz-VUo">
                             <items>

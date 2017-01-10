@@ -13,9 +13,8 @@ import Foundation
 class NewItemsInterfaceController: WKInterfaceController {
 
     
-    @IBOutlet var LblDate: WKInterfaceDate!
-    
-    @IBOutlet var LblKmTot: WKInterfaceLabel!
+    @IBOutlet var LblData: WKInterfaceLabel!
+        @IBOutlet var LblKmTot: WKInterfaceLabel!
     
     
     override func awake(withContext context: Any?) {
@@ -30,10 +29,20 @@ class NewItemsInterfaceController: WKInterfaceController {
             if text != ""{
           
                 print("DATA: \(text)")
+            
+                LblData.setText(text)
+            }else{
                 
-               
+                let date = NSDate()
+                let calendar = NSCalendar.current
                 
-               
+                let daynow = calendar.component(.day, from: date as Date)
+                let monthnow = calendar.component(.month, from: date as Date)
+                let yearnow = calendar.component(.year, from: date as Date)
+                
+             let   DateString = "\(String(format: "%02d",daynow))/\(String(format: "%02d",monthnow))/\(yearnow)"
+
+                 LblData.setText(DateString)
                 
             }
             
@@ -68,11 +77,34 @@ class NewItemsInterfaceController: WKInterfaceController {
         })
     }
   
-    
-    @IBAction func CmdDate(_ sender: Any) {
+    @IBAction func CmdData(_ sender: Any) {
         
         self.presentController(withName: "DateView", context: "")
+            
+            
+        
+        
+        
         
     }
     
+     func contextForSegueWithIdentifier(segueIdentifier: String) ->
+        AnyObject? {
+            if segueIdentifier == "add" {
+         //       return ["segue": "hierarchical",
+          //      "data":"Passed through hierarchical navigation"]
+                print("add")
+        
+            } else {
+            //    return ["segue": "", "data: "]
+            }
+              return "" as AnyObject?
+    }
+
+
+    @IBAction func CmdSave() {
+        
+        
+        
+    }
 }
