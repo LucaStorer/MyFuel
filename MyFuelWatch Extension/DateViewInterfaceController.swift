@@ -43,9 +43,9 @@ var monthsMap = [Int: String]()
 	
 	func getDateFromString() -> NSDate {
 		let dateFormatter = NSDateFormatter()
-		dateFormatter.dateFormat = "M d yyyy"
+		dateFormatter.dateFormat = "dd MM yyyy"
 		
-		let dateString = month.description + " " + day.description + " " + year.description 
+		let dateString = day.description + " " + month.description + " " + year.description 
 		let dateObtainedFromString = dateFormatter.dateFromString(dateString)
 		
 		if let _ = dateObtainedFromString {
@@ -76,7 +76,7 @@ var monthsMap = [Int: String]()
 		for var i = 0; i < monthsMap.count; ++i {
 			let pickerItem = WKPickerItem()
 			pickerItem.title = monthsMap[i]
-			pickerItem.caption = "Month"
+			pickerItem.caption = "Mese"
 			monthPickerItems.append(pickerItem)
 		}
 		
@@ -90,7 +90,7 @@ var monthsMap = [Int: String]()
 			daysArray.append(day++)
 			let pickerItem = WKPickerItem()
 			pickerItem.title = daysArray[i].description
-			pickerItem.caption = "Day"
+			pickerItem.caption = "Giorno"
 			dayPickerItems.append(pickerItem)
 		}
 		
@@ -103,7 +103,7 @@ var monthsMap = [Int: String]()
 		for var i = 0; i < yearsArray.count; ++i {
 			let pickerItem = WKPickerItem()
 			pickerItem.title = yearsArray[i].description
-			pickerItem.caption = "Year"
+			pickerItem.caption = "Anno"
 			yearPickerItems.append(pickerItem)
 		}
 		
