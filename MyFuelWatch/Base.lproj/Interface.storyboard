@@ -133,17 +133,17 @@
                             <items>
                                 <picker width="0.29999999999999999" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="il1-Ap-mwu">
                                     <connections>
-                                        <action selector="CmdDay:" destination="jJq-z9-GSr" id="Mvb-di-CRR"/>
+                                        <action selector="dayPicker:" destination="jJq-z9-GSr" id="djo-iE-xEl"/>
                                     </connections>
                                 </picker>
                                 <picker width="0.29999999999999999" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="2Ug-2K-vfM">
                                     <connections>
-                                        <action selector="CmdMonth:" destination="jJq-z9-GSr" id="qJS-e9-cs9"/>
+                                        <action selector="monthPicker:" destination="jJq-z9-GSr" id="xHT-0O-H6o"/>
                                     </connections>
                                 </picker>
                                 <picker width="0.40000000000000002" height="100" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="WAB-z2-uyY">
                                     <connections>
-                                        <action selector="CmdYear:" destination="jJq-z9-GSr" id="a20-yo-3Rj"/>
+                                        <action selector="yearPicker:" destination="jJq-z9-GSr" id="TUn-az-ClL"/>
                                     </connections>
                                 </picker>
                             </items>
@@ -156,9 +156,9 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="picDay" destination="il1-Ap-mwu" id="rh2-r0-8uK"/>
-                        <outlet property="picMonth" destination="2Ug-2K-vfM" id="eLh-LR-RNU"/>
-                        <outlet property="picYear" destination="WAB-z2-uyY" id="uBL-qS-zxQ"/>
+                        <outlet property="dayPicker" destination="il1-Ap-mwu" id="SqU-Lb-gfX"/>
+                        <outlet property="monthPicker" destination="2Ug-2K-vfM" id="k57-BB-Oie"/>
+                        <outlet property="yearPicker" destination="WAB-z2-uyY" id="WN0-mm-XT9"/>
                     </connections>
                 </controller>
             </objects>

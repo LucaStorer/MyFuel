@@ -13,7 +13,7 @@ import Foundation
 
 class DateViewInterfaceController: WKInterfaceController {
 
-var monthsMap = [Int: String]()
+    var monthsMap = [Int: String]()
 	var daysArray = [Int]()
 	var yearsArray = [Int]()
 
@@ -23,40 +23,42 @@ var monthsMap = [Int: String]()
 	var year = Int()
 	
 
-	let yearOffset = 1900
+	let yearOffset = 1950
 	
 	@IBOutlet var monthPicker: WKInterfacePicker!
-	@IBAction func monthPicker(value: Int) {
+	@IBAction func monthPicker(_ value: Int) {
 		month = value + 1
 	}
 	
+    
 	@IBOutlet var dayPicker: WKInterfacePicker!
-	@IBAction func dayPicker(value: Int) {
+	@IBAction func dayPicker(_ value: Int) {
 		day = value + 1
 	}
 	
 	@IBOutlet var yearPicker: WKInterfacePicker!
-	@IBAction func yearPicker(value: Int) {
+	@IBAction func yearPicker(_ value: Int) {
 		year = yearsArray[value]
 	}
 	
 	
 	func getDateFromString() -> NSDate {
-		let dateFormatter = NSDateFormatter()
-		dateFormatter.dateFormat = "dd MM yyyy"
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "dd mm yyyy"
 		
 		let dateString = day.description + " " + month.description + " " + year.description 
-		let dateObtainedFromString = dateFormatter.dateFromString(dateString)
+		let dateObtainedFromString = dateFormatter.date(from: dateString)
 		
 		if let _ = dateObtainedFromString {
-			return dateObtainedFromString!
+			return dateObtainedFromString! as NSDate
 		}
 		else {
 			return NSDate.init(timeIntervalSinceNow: 100)
 		}
 	}
 	
-	override func awakeWithContext(context: AnyObject?) {
+	   override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
 		// Fill months map with month abbreviations
 		monthsMap[0] = "Jan"
 		monthsMap[1] = "Feb"
@@ -73,7 +75,7 @@ var monthsMap = [Int: String]()
 		
 		// Fill monthPicker with month abbreviation strings
 		var monthPickerItems = [WKPickerItem]()
-		for var i = 0; i < monthsMap.count; ++i {
+		for i in 0 ..< monthsMap.count {
 			let pickerItem = WKPickerItem()
 			pickerItem.title = monthsMap[i]
 			pickerItem.caption = "Mese"
@@ -83,24 +85,33 @@ var monthsMap = [Int: String]()
 		monthPicker.setItems(monthPickerItems)
 		
 		// Create and initialize daysArray and daysPicker
-		var day = 1
+        var day: Int = 1
 		
 		var dayPickerItems = [WKPickerItem]()
-		for var i = 0; i < 31; ++i {
-			daysArray.append(day++)
+		for i in 0 ..< 31 {
+            
+			daysArray.append(day)
 			let pickerItem = WKPickerItem()
 			pickerItem.title = daysArray[i].description
 			pickerItem.caption = "Giorno"
 			dayPickerItems.append(pickerItem)
+            day += 1
 		}
 		
 		dayPicker.setItems(dayPickerItems)
 		
-		for var yearIndex = 1900; yearIndex <= 2100; ++yearIndex {
-			yearsArray.append(yearIndex)
-		}
+		//for var yearIndex = 1900; yearIndex <= 2100; yearIndex += 1 {
+	//		yearsArray.append(yearIndex)
+	//	}
+        
+        for yearIndex in 1950...2050{
+            
+            yearsArray.append(yearIndex)
+            
+        }
+        
 		var yearPickerItems = [WKPickerItem]()
-		for var i = 0; i < yearsArray.count; ++i {
+		for i in 0 ..< yearsArray.count {
 			let pickerItem = WKPickerItem()
 			pickerItem.title = yearsArray[i].description
 			pickerItem.caption = "Anno"
@@ -127,29 +138,29 @@ var monthsMap = [Int: String]()
 	
 	func setDefaultPickersOnDatePickerInterfaceController() {
 		let todayDate = NSDate()
-		let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+		let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
 		
-		let monthComponent = calendar.components(.Month, fromDate: todayDate)
+		let monthComponent = calendar.components(.month, from: todayDate as Date)
 		let month = monthComponent.month
 		
-		let dayComponent = calendar.components(.Day, fromDate: todayDate)
+		let dayComponent = calendar.components(.day, from: todayDate as Date)
 		let day = dayComponent.day
 		
-		let yearComponent = calendar.components(.Year, fromDate: todayDate)
+		let yearComponent = calendar.components(.year, from: todayDate as Date)
 		let year = yearComponent.year
 		
 				
 		// These have no "0" state so they are 0 index based
-		monthPicker.setSelectedItemIndex(month - 1)
-		dayPicker.setSelectedItemIndex(day - 1)
-		yearPicker.setSelectedItemIndex(year - yearOffset)
+		monthPicker.setSelectedItemIndex(month! - 1)
+		dayPicker.setSelectedItemIndex(day! - 1)
+		yearPicker.setSelectedItemIndex(year! - yearOffset)
 		
 	}
 
  
        @IBAction func CmdOk() {
         
-        let DateString = getDateFromString
+        let DateString = getDateFromString()
         
         print(DateString)
         
