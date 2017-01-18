@@ -40,7 +40,7 @@
                         <group width="1" alignment="left" layout="vertical" id="ZSZ-oG-FHu" userLabel="MainGroup">
                             <items>
                                 <label alignment="center" text="Consumo Medio" textAlignment="center" id="d5A-bm-Sno"/>
-                                <label alignment="center" text="8.47" textAlignment="center" id="f6F-xX-zKw">
+                                <label alignment="center" text="-" textAlignment="center" id="f6F-xX-zKw">
                                     <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="24"/>
                                 </label>
@@ -48,16 +48,16 @@
                                 <separator alignment="left" id="uzo-rd-SYE">
                                     <color key="color" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </separator>
-                                <label alignment="center" text="22323 Km Anno" textAlignment="center" numberOfLines="2" id="hYK-EG-ptH">
+                                <label alignment="center" text="- Km Anno" textAlignment="center" numberOfLines="2" id="hYK-EG-ptH">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
                                 </label>
-                                <label alignment="center" text="0.102 €/l" id="nTc-PN-fPU">
+                                <label alignment="center" text="- €/l" id="nTc-PN-fPU">
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
                                 <separator alignment="left" id="TtG-9i-2yk">
                                     <color key="color" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </separator>
-                                <label alignment="center" text="37270 Km Totali" textAlignment="center" numberOfLines="2" id="uEk-c4-PaF">
+                                <label alignment="center" text="- Km Totali" textAlignment="center" numberOfLines="2" id="uEk-c4-PaF">
                                     <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                 </label>
                             </items>

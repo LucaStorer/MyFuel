@@ -205,13 +205,24 @@ class ViewNewValue: UIViewController {
     }
 
     func CalcolaValoriMedi(){
+        
+        CalcolaLitri()
 
         if (LblKmTot.text != "" && LblEuroLitro.text != "" && KmParziali != "0" && LblLitri.text != ""){
 
-            let f_Litri:Float = Float.init(LitriCalcolo.replacingOccurrences(of: ",", with: "."))!
-            let f_KmParziali:Float = Float.init(KmParzialiCalcolo)!
+            
+            var f_Litri:Float = Float.init(LitriCalcolo.replacingOccurrences(of: ",", with: "."))!
+            var f_KmParziali:Float = Float.init(KmParzialiCalcolo)!
             let f_Euro:Float = Float.init(LblEuro.text!.replacingOccurrences(of: ",", with: "."))!
 
+            //Verifica che se è nuovo lo deve calcolare al volo
+            if (f_Litri == 0){
+                
+                f_Litri = Float.init(Litri.replacingOccurrences(of: ",", with: "."))!
+                f_KmParziali = Float.init(KmParziali.replacingOccurrences(of: ",", with: "."))!
+
+            }
+            
             let f_Litri100Km = (f_Litri * 100) / f_KmParziali
 
             Litri100Km =  String(format: "%.2f",f_Litri100Km)
